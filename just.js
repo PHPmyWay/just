@@ -118,7 +118,7 @@
 			}
 		};
         
-        if (!isEmpty(sBoundary)) {
+        if (!isEmpty(sBoundary) && !isEmpty(xhr.upload)) {
             xhr.upload.onprogress = function(e) {
                 if (e.lengthComputable) {
                     justEventCaller('jaUploading', {value: parseInt((e.loaded/e.total)*10000)/100, loaded: e.loaded, total: e.total}, requestId);

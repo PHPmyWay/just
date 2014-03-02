@@ -6,16 +6,22 @@ His minimized weight is less than 5Kb.
 
 ## Browser Support
 
-The purpose of __just__ is to provide as simple as possible cool features given by the newest technologies.
-For this reason the browser support is as the follow:
+For the AJAX basic requests the support is extended to all browser that have XMLHttpRequests natively.
+
+The purpose of __just__ is also to provide as simple as possible cool features given by the newest technologies.
+For this reason the browser support for the uploader feature is as the follow:
 
 > IE 10+
+
 > Firefox 26+
+
 > Chrome 31+
+
 > Safari 6+
+
 > Opera 19+
 
-(according caniuse.com, the browser support rate it's about the 76%)
+(according caniuse.com, the browser support rate it's about the 77%)
 
 
 ## Some Examples
@@ -70,8 +76,11 @@ And now here is the magic (and don't forget to register the click event on the b
         });
 
 The progress object contains the following properties:
+
 __value__ a percentage value of the upload progress
+
 __loaded__ total bytes uploaded
+
 __total__ total bytes to upload
 
 
