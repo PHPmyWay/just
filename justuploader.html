@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>justUpload Example</title></head>
+<body>
+
+<p>Select one or more files: <input id="file" type="file" name="file[]" multiple></p>
+ 
+<progress id="loading" value="0"min="0" max="100"></progress> 
+<button id="start">Upload</button>
+
+<p>output:
+<output id="result"></output>
+
+ 
+ 
+<script src="just.js"></script>
+<script>
+
+window.onload = function() {
+    
+    document.getElementById('start').onclick = function() {
+        
+        justUpload('fileupload.php', document.getElementById('file'))
+            .uploading(function(progress){
+                document.getElementById('loading').value = progress.value;
+            })
+            .done(function(data){
+                document.getElementById('result').innerHTML = data;
+            });
+            
+    };
+};
+
+</script>
+</body>
+</html>
